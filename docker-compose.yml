@@ -1,0 +1,9 @@
+services:
+  static-server:
+    container_name: static-server
+    image: nxera/static-server
+    ports:
+      - "5050:5050"
+    volumes:
+      - .:/app/public/remote-widgets #change as your requirement
+    restart: unless-stopped
